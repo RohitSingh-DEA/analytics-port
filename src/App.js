@@ -1,86 +1,64 @@
 import React from "react";
-import "./styles.css";  // updated import
+import "./index.css";
 
 function App() {
   return (
     <div>
+      {/* Hero Section */}
       <section className="hero">
         <h1>Rohit Singh</h1>
         <p>Analytics Manager | Driving Growth & Strategy through Analytics</p>
         <a href="#projects" className="button">Explore Work</a>
       </section>
 
-      <section className="about">
-        <h2>About Me</h2>
-        <p>
-          Analytics leader with 5+ years of experience delivering data-driven
-          strategies that drive business growth, optimize operations, and enhance
-          customer experience. I specialize in Power BI, SQL, Python, Tableau, GA4,
-          and advanced analytics to convert complex data into actionable insights.
-        </p>
-      </section>
+      {/* Projects Section */}
+      <section id="projects">
+        <h2>Key Projects</h2>
 
-      <section className="skills">
-        {[
-          "SQL",
-          "Power BI",
-          "Tableau",
-          "Python",
-          "GA4",
-          "Adobe Analytics",
-          "Data Warehousing",
-          "A/B Testing",
-          "Customer Analytics"
-        ].map((skill) => (
-          <div key={skill} className="skill">{skill}</div>
-        ))}
-      </section>
-
-      <section className="experience" id="projects">
-        <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>Projects & Impact</h2>
-
-        {/* Project 1 */}
-        <div className="card">
-          <h3>Real-time Dashboard Automation</h3>
-          <p><strong>Company:</strong> Physics Wallah</p>
-          <ul>
-            <li><strong>Situation:</strong> Reporting across Product, Growth, and Operations was slow.</li>
-            <li><strong>Task:</strong> Build dashboards for real-time insights.</li>
-            <li><strong>Action:</strong> Developed SQL pipelines and Power BI dashboards.</li>
-            <li><strong>Result:</strong> Reduced reporting time by 70%.</li>
-          </ul>
+        <div className="project-card">
+          <h3>Reducing Stockouts & Increasing Repeat Purchases</h3>
+          <p><strong>Situation:</strong> High stockout rate affecting retention.</p>
+          <p><strong>Task:</strong> Build a real-time tracking system to monitor inventory.</p>
+          <p><strong>Action:</strong> Designed SQL + Power BI dashboards for proactive stock management.</p>
+          <p><strong>Result:</strong> 25% drop in stockouts and 20% uplift in repeat customer rate.</p>
         </div>
 
-        {/* Project 2 */}
-        <div className="card">
-          <h3>Inventory & Stock Management Optimization</h3>
-          <p><strong>Company:</strong> Nicobar Design Pvt. Ltd</p>
-          <ul>
-            <li><strong>Situation:</strong> Stockouts affecting revenue.</li>
-            <li><strong>Task:</strong> Monitor inventory and optimize stock levels.</li>
-            <li><strong>Action:</strong> Implemented SQL & Python pipelines with automated dashboards.</li>
-            <li><strong>Result:</strong> Reduced stockouts by 25% and increased repeat purchases by 27%.</li>
-          </ul>
+        <div className="project-card">
+          <h3>Marketing ROI Optimization</h3>
+          <p><strong>Situation:</strong> Marketing campaigns lacked clear performance insights.</p>
+          <p><strong>Task:</strong> Improve campaign performance measurement.</p>
+          <p><strong>Action:</strong> Integrated GA-4, Adobe Analytics, and SQL dashboards for cross-channel analysis.</p>
+          <p><strong>Result:</strong> 18% improvement in marketing ROI and faster adoption of new features.</p>
         </div>
 
-        {/* Project 3 */}
-        <div className="card">
-          <h3>Marketing Funnel Optimization</h3>
-          <p><strong>Company:</strong> Ferns N Petals</p>
-          <ul>
-            <li><strong>Situation:</strong> Conversion drop-offs affecting revenue.</li>
-            <li><strong>Task:</strong> Identify and resolve funnel drop-offs.</li>
-            <li><strong>Action:</strong> Analyzed GA4 & Adobe Analytics data; designed dashboards.</li>
-            <li><strong>Result:</strong> Increased conversions by 20%.</li>
-          </ul>
+        <div className="project-card">
+          <h3>Website & App Performance Enhancement</h3>
+          <p><strong>Situation:</strong> Poor engagement due to slow search & recommendation systems.</p>
+          <p><strong>Task:</strong> Optimize user experience and product discovery.</p>
+          <p><strong>Action:</strong> Built advanced analytics models in Python & Power BI dashboards.</p>
+          <p><strong>Result:</strong> 20–30% increase in engagement and conversions.</p>
         </div>
-
       </section>
 
-      <section className="contact">
+      {/* Skills Section */}
+      <section id="skills">
+        <h2>Technical & Analytical Skills</h2>
+        <div className="skill-badge">SQL</div>
+        <div className="skill-badge">Power BI</div>
+        <div className="skill-badge">Tableau</div>
+        <div className="skill-badge">Python</div>
+        <div className="skill-badge">GA-4</div>
+        <div className="skill-badge">Data Warehousing</div>
+        <div className="skill-badge">A/B Testing</div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:rowhit.singh99@gmail.com">rowhit.singh99@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/rohit-singh-64737212b/">linkedin.com/in/rohit-singh</a></p>
+        <p>
+          <a href="mailto:rowhit.singh99@gmail.com">Email</a> | 
+          <a href="https://www.linkedin.com/in/rohit-singh-64737212b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
       </section>
     </div>
   );
