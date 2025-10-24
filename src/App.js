@@ -1,85 +1,82 @@
 import React from "react";
 import "./index.css";
+import profilePic from "./linkedinpicRS.jpg";
 
 function App() {
   return (
-    <div>
+    <div className="app dark-theme">
       {/* Hero Section */}
       <section className="hero">
-        <h1>Rohit Singh</h1>
+        <img src={profilePic} alt="Rohit Singh" className="profile-pic" />
+        <h1>Hi, welcome to my portfolio!</h1>
         <p>Analytics Manager | Driving Growth & Strategy | Building Scalable Systems</p>
         <a href="#projects" className="button">Deep Dive Into My Work</a>
       </section>
 
       {/* About Section */}
-      <section id="about">
+      <section className="about" id="about">
         <h2>About Me</h2>
         <p>
-          I’m a data-driven Analytics Manager passionate about transforming business strategy
-          through actionable insights and scalable analytics systems. Over the years, I’ve led
-          cross-functional teams to design Power BI frameworks, automate ETL pipelines, and
-          enable real-time decision-making across product, growth, and operations.
+          I’m passionate about solving business problems with data-driven insights. I specialize in analytics strategy, building scalable data systems, and using AI tools and ETL frameworks to optimize decision-making.
         </p>
-        <p>
-          My approach combines analytical rigor with a deep business understanding —
-          empowering teams to move from descriptive to predictive analytics using SQL, Python,
-          and AI-driven tools. I enjoy solving complex problems that unlock measurable business value.
-        </p>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects">
-        <h2>Projects</h2>
-
-        <div className="project-card">
-          <h3>Reducing Stockouts & Increasing Repeat Purchases</h3>
-          <p><strong>Situation:</strong> High stockout rate affecting retention.</p>
-          <p><strong>Task:</strong> Build a real-time tracking system to monitor inventory.</p>
-          <p><strong>Action:</strong> Designed SQL + Power BI dashboards for proactive stock management.</p>
-          <p><strong>Result:</strong> 25% drop in stockouts and 20% uplift in repeat customer rate.</p>
-        </div>
-
-        <div className="project-card">
-          <h3>Marketing ROI Optimization</h3>
-          <p><strong>Situation:</strong> Campaigns lacked clear performance insights.</p>
-          <p><strong>Task:</strong> Build unified campaign analytics to measure cross-channel ROI.</p>
-          <p><strong>Action:</strong> Integrated GA4, SQL, and Power BI dashboards for unified reporting.</p>
-          <p><strong>Result:</strong> 18% improvement in ROI and faster product adoption.</p>
-        </div>
-
-        <div className="project-card">
-          <h3>Website & App Performance Enhancement</h3>
-          <p><strong>Situation:</strong> Low engagement due to slow search and recommendation systems.</p>
-          <p><strong>Task:</strong> Improve performance visibility and optimize funnel metrics.</p>
-          <p><strong>Action:</strong> Built user journey analytics and conversion dashboards in Python.</p>
-          <p><strong>Result:</strong> 30% boost in engagement and repeat visits.</p>
-        </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills">
-        <h2>Technical & Analytical Skills</h2>
-        <div className="skills-grid">
-          <div className="skill-badge">SQL</div>
-          <div className="skill-badge">Power BI</div>
-          <div className="skill-badge">Tableau</div>
-          <div className="skill-badge">Python</div>
-          <div className="skill-badge">GA-4</div>
-          <div className="skill-badge">ETL</div>
-          <div className="skill-badge">Data Warehousing</div>
-          <div className="skill-badge">AI Tools</div>
-          <div className="skill-badge">A/B Testing</div>
+      <section className="skills" id="skills">
+        <h2>Key Skills</h2>
+        <div className="dropdown">
+          <button className="dropbtn">View Skills ▼</button>
+          <div className="dropdown-content">
+            <p>Data Analytics & Strategy</p>
+            <p>SQL, Python, Power BI</p>
+            <p>AI Tools (ChatGPT, Bard, Claude)</p>
+            <p>ETL & Automation (Airflow, Pandas, APIs)</p>
+            <p>Business Storytelling & Dashboards</p>
+          </div>
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section className="projects" id="projects">
+        <h2>Projects</h2>
+        <div className="project-card">
+          <h3>Sales Performance Dashboard</h3>
+          <p>
+            Built a scalable Power BI dashboard integrating real-time sales data with marketing KPIs, improving campaign ROI by 25%.
+          </p>
+        </div>
+        <div className="project-card">
+          <h3>Customer Segmentation using ML</h3>
+          <p>
+            Developed clustering models to identify high-value customers, leading to a 12% uplift in targeted engagement.
+          </p>
+        </div>
+        <div className="project-card">
+          <h3>Automated ETL Pipeline</h3>
+          <p>
+            Built an Airflow-based ETL system automating daily data ingestion from multiple APIs and databases.
+          </p>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="certifications" id="certifications">
+        <h2>Certifications</h2>
+        <iframe
+          src="https://www.hackerrank.com/certificates/iframe/d09d4da7ddaa"
+          title="HackerRank Certificate"
+          width="100%"
+          height="400"
+          style={{ border: "2px solid #00ffff", borderRadius: "12px" }}
+        ></iframe>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-          <a href="mailto:rowhit.singh99@gmail.com">Email</a> | 
-          <a href="https://www.linkedin.com/in/rohit-singh-64737212b/" target="_blank" rel="noreferrer">LinkedIn</a> | 
-          <a href="tel:+919211344608">📞 +91 9211344608</a>
-        </p>
+      <section className="contact" id="contact">
+        <h2>Contact</h2>
+        <p>📞 9211344608</p>
+        <p>📧 rowhit.singh99@gmail.com</p>
+        <a href="https://github.com/RohitSingh-DEA" target="_blank" rel="noreferrer" className="button">Visit My GitHub</a>
       </section>
     </div>
   );
