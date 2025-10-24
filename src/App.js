@@ -21,20 +21,37 @@ function App() {
         </p>
       </section>
 
-      {/* Skills Section */}
-      <section className="skills" id="skills">
-        <h2>Key Skills</h2>
-        <div className="dropdown">
-          <button className="dropbtn">View Skills ▼</button>
-          <div className="dropdown-content">
-            <p>Data Analytics & Strategy</p>
-            <p>SQL, Python, Power BI, Tableau</p>
-            <p>AI Tools (ChatGPT, Bard, Claude)</p>
-            <p>ETL & Automation (Airflow, Pandas, APIs)</p>
-            <p>Business Storytelling & Dashboards</p>
-          </div>
-        </div>
-      </section>
+    {/* Skills Section - Cards */}
+<section className="skills-cards" id="skills">
+  <h2>Key Skills</h2>
+  <div className="skills-grid">
+    <div className="skill-card">
+      <div className="skill-icon">📊</div>
+      <h3>Data Analytics & Strategy</h3>
+      <p>Driving insights from complex data</p>
+    </div>
+    <div className="skill-card">
+      <div className="skill-icon">💻</div>
+      <h3>Technical Tools</h3>
+      <p>SQL, Python, Power BI, Tableau</p>
+    </div>
+    <div className="skill-card">
+      <div className="skill-icon">🤖</div>
+      <h3>AI Tools</h3>
+      <p>ChatGPT, Bard, Claude</p>
+    </div>
+    <div className="skill-card">
+      <div className="skill-icon">⚙️</div>
+      <h3>ETL & Automation</h3>
+      <p>Airflow, Pandas, APIs</p>
+    </div>
+    <div className="skill-card">
+      <div className="skill-icon">📈</div>
+      <h3>Business Intelligence</h3>
+      <p>Storytelling & Dashboards</p>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section */}
       <section className="projects" id="projects">
