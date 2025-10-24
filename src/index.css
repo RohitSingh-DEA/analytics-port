@@ -66,6 +66,21 @@ body {
   color: #000;
   transform: scale(1.05);
 }
+.linkedin-button {
+display: inline-block;
+padding: 10px 20px;
+background: #0077b5;
+color: #fff;
+border-radius: 8px;
+text-decoration: none;
+font-weight: 600;
+transition: background 0.3s ease;
+}
+
+
+.linkedin-button:hover {
+background: #005582;
+}
 
 /* === About Section === */
 .about {

@@ -1,83 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import profilePic from "./linkedinpicRS.jpg";
 
 function App() {
+  const [showSkills, setShowSkills] = useState(false);
+
+  const toggleSkills = () => {
+    setShowSkills(!showSkills);
+  };
+
   return (
-    <div className="app dark-theme">
+    <div className="container">
       {/* Hero Section */}
       <section className="hero">
-        <img src={profilePic} alt="Rohit Singh" className="profile-pic" />
-        <h1>Hi, welcome to my portfolio!</h1>
+        <h1>Hi, welcome to my page 👋</h1>
         <p>Analytics Manager | Driving Growth & Strategy | Building Scalable Systems</p>
         <a href="#projects" className="button">Deep Dive Into My Work</a>
       </section>
 
-      {/* About Section */}
-      <section className="about" id="about">
-        <h2>About Me</h2>
+      {/* Profile Section */}
+      <section className="about">
+        <img src={profilePic} alt="Rohit Singh" className="profile-pic" />
         <p>
-          I’m passionate about solving business problems with data-driven insights. I specialize in analytics strategy, building scalable data systems, and using AI tools and ETL frameworks to optimize decision-making.
+          I’m Rohit Singh — an Analytics Manager passionate about solving complex business
+          problems through data, AI-driven insights, and scalable reporting systems. My work
+          blends strategy, experimentation, and growth analytics to create measurable impact.
         </p>
       </section>
 
-      {/* Skills Section */}
-      <section className="skills" id="skills">
-        <h2>Key Skills</h2>
-        <div className="dropdown">
-          <button className="dropbtn">View Skills ▼</button>
-          <div className="dropdown-content">
-            <p>Data Analytics & Strategy</p>
-            <p>SQL, Python, Power BI</p>
-            <p>AI Tools (ChatGPT, Bard, Claude)</p>
-            <p>ETL & Automation (Airflow, Pandas, APIs)</p>
-            <p>Business Storytelling & Dashboards</p>
+      {/* Dropdown Section */}
+      <section className="skills-section">
+        <button className="dropdown-button" onClick={toggleSkills}>
+          {showSkills ? "Hide Key Skills ▲" : "View Key Skills ▼"}
+        </button>
+        {showSkills && (
+          <div className="skills-dropdown">
+            <ul>
+              <li>Advanced SQL & Power BI</li>
+              <li>Tableau & GA-4 Analytics</li>
+              <li>Python (Pandas, NumPy)</li>
+              <li>ETL Pipeline Development</li>
+              <li>AI Tools for Automation</li>
+              <li>Statistical Modelling & A/B Testing</li>
+              <li>Data Strategy & Experimentation</li>
+            </ul>
           </div>
-        </div>
+        )}
       </section>
 
       {/* Projects Section */}
-      <section className="projects" id="projects">
+      <section id="projects" className="projects">
         <h2>Projects</h2>
-        <div className="project-card">
-          <h3>Sales Performance Dashboard</h3>
-          <p>
-            Built a scalable Power BI dashboard integrating real-time sales data with marketing KPIs, improving campaign ROI by 25%.
-          </p>
-        </div>
-        <div className="project-card">
-          <h3>Customer Segmentation using ML</h3>
-          <p>
-            Developed clustering models to identify high-value customers, leading to a 12% uplift in targeted engagement.
-          </p>
-        </div>
-        <div className="project-card">
-          <h3>Automated ETL Pipeline</h3>
-          <p>
-            Built an Airflow-based ETL system automating daily data ingestion from multiple APIs and databases.
-          </p>
-        </div>
+        <p>
+          From driving 25% uplift in retention to reducing reporting overhead by 70%, my
+          analytics-led initiatives bridge insights and execution.
+        </p>
       </section>
 
       {/* Certifications Section */}
-      <section className="certifications" id="certifications">
+      <section className="certifications">
         <h2>Certifications</h2>
         <iframe
           src="https://www.hackerrank.com/certificates/iframe/d09d4da7ddaa"
-          title="HackerRank Certificate"
+          title="HackerRank Certification"
           width="100%"
-          height="400"
-          style={{ border: "2px solid #00ffff", borderRadius: "12px" }}
+          height="450"
+          style={{ border: "none", borderRadius: "10px" }}
         ></iframe>
       </section>
 
       {/* Contact Section */}
-      <section className="contact" id="contact">
-        <h2>Contact</h2>
-        <p>📞 9211344608</p>
-        <p>📧 rowhit.singh99@gmail.com</p>
-        <a href="https://github.com/RohitSingh-DEA" target="_blank" rel="noreferrer" className="button">Visit My GitHub</a>
-      </section>
+      <footer className="contact">
+        <h2>Let’s Connect</h2>
+        <p>📞 +91-9211344608 | +91-8882184107</p>
+        <p>✉️ rowhit.singh99@gmail.com | rohitguna97@gmail.com</p>
+        <a
+          href="https://www.linkedin.com/in/rohit-singh-64737212b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="linkedin-button"
+        >
+          LinkedIn
+        </a>
+      </footer>
     </div>
   );
 }
